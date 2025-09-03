@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – Quorics</title>
+  <link rel="icon" href="quorics-logo.png" type="image/png">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+</head>
+<body class="text-black" style="font-family: 'IBM Plex Mono', monospace; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); min-height: 100vh;">
+
+  <!-- Top Bar -->
+  <div id="lux-topbar" class="fixed top-0 left-0 w-full z-50 backdrop-blur border-b border-zinc-800 h-14 flex items-center px-8 justify-between">
+    <div class="flex items-center gap-3">
+      <span class="inline-block w-3 h-3 rounded-sm bg-black mr-2"></span>
+      <span class="font-mono text-xs tracking-widest text-black hidden md:inline">INR 00:00:00 GMT +5:30</span>
+    </div>
+    <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+      <a href="index.html" class="text-lg md:text-2xl font-bold tracking-widest text-black" style="font-family: 'Poiret One', cursive;">QUORICS</a>
+    </div>
+    <div class="ml-auto">
+      <span id="menu-toggle" class="uppercase text-sm tracking-widest font-semibold cursor-pointer text-black">MENU</span>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="min-h-screen pb-20" style="background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 50%, #e2e8f0 100%); padding-top: 100px;">
+    <div class="max-w-6xl mx-auto px-8">
+      <div class="mb-20">
+        <h1 class="text-6xl md:text-8xl font-light text-black tracking-wider mb-8" style="font6-family: 'Roboto Flex', sans-serif;">
+          CONTACT<br>US
+        </h1>
+        <p class="text-lg text-gray-600 max-w-2xl">
+          Ready to start your next project? Get in touch with our team and let's discuss how we can bring your vision to life.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+        <!-- Contact Form -->
+        <div class="bg-white/30 backdrop-blur-sm rounded-lg p-6 lg:p-8 shadow-lg">
+          <div class="mb-8">
+            <span class="text-gray-500 text-xs uppercase tracking-wider">■ GET IN TOUCH</span>
+          </div>
+          
+          <!-- Message Container -->
+          <div id="message-container" class="mb-6 p-4 rounded-lg hidden">
+            <p id="message-text" class="text-sm font-medium"></p>
+          </div>
+          
+          <form id="contact-form" class="space-y-6">
+            <div>
+              <label class="block text-sm font-medium text-black mb-2">NAME</label>
+              <input type="text" id="name" name="name" required class="w-full border-b-2 border-gray-300 bg-white/50 backdrop-blur-sm py-3 px-2 focus:border-black focus:outline-none transition-colors rounded-t-md">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-black mb-2">EMAIL</label>
+              <input type="email" id="email" name="email" required class="w-full border-b-2 border-gray-300 bg-white/50 backdrop-blur-sm py-3 px-2 focus:border-black focus:outline-none transition-colors rounded-t-md">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-black mb-2">COMPANY</label>
+              <input type="text" id="company" name="company" class="w-full border-b-2 border-gray-300 bg-white/50 backdrop-blur-sm py-3 px-2 focus:border-black focus:outline-none transition-colors rounded-t-md">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-black mb-2">MESSAGE</label>
+              <textarea rows="4" id="message" name="message" required class="w-full border-b-2 border-gray-300 bg-white/50 backdrop-blur-sm py-3 px-2 focus:border-black focus:outline-none resize-none transition-colors rounded-t-md"></textarea>
+            </div>
+            
+            <button type="submit" class="bg-black text-white px-8 py-3 text-sm uppercase tracking-wider hover:bg-gray-800 transition-colors">
+              SEND MESSAGE
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="bg-white/30 backdrop-blur-sm rounded-lg p-6 lg:p-8 shadow-lg">
+          <div class="mb-8">
+            <span class="text-gray-500 text-xs uppercase tracking-wider">■ REACH OUT</span>
+          </div>
+          
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-sm font-medium text-black mb-2 uppercase">EMAIL</h3>
+              <p class="text-gray-600">ssharvesh616@gmail.com</p>
+            </div>
+            
+            <div>
+              <h3 class="text-sm font-medium text-black mb-2 uppercase">PHONE</h3>
+              <p class="text-gray-600">+1 (555) 123-4567</p>
+            </div>
+            
+            <div>
+              <h3 class="text-sm font-medium text-black mb-2 uppercase">ADDRESS</h3>
+              <p class="text-gray-600">
+                 H448 HIGH SCHOOL ROAD<br>
+                P.VELUR , NAMAKKAL<br>
+                TAMILNADU<br>
+                INDIA
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-sm font-medium text-black mb-2 uppercase">OFFICE HOURS</h3>
+              <p class="text-gray-600">
+                Monday - Friday: 9:00 AM - 6:00 PM<br>
+                Saturday: 10:00 AM - 4:00 PM<br>
+                Sunday: Closed
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<div style="width: 100%; height: 1px; background-color: rgb(0, 0, 0); margin-top: 120px;"></div>
+	<footer style="width: 100%; height: 500px; background-color: #f8fafc; font-family: 'IBM Plex Mono', monospace; display: flex;">
+		<!-- Column 1: Vision Statement -->
+		<div style="width: 25%; height: 100%; padding: 40px; border-right: 1px solid rgb(0, 0, 0); display: flex; align-items: flex-start;">
+			<h3 style="color: rgb(0, 0, 0); text-transform: uppercase; font-weight: 500; font-size: 14px; line-height: 1.4; margin: 0;">
+				VISUALISING THIS WORLD<br>AND THE NEXT
+			</h3>
+		</div>
+		<!-- Column 2: Navigation -->
+		<div style="width: 25%; height: 100%; padding: 40px; border-right: 1px solid rgb(0, 0, 0);">
+			<div style="margin-bottom: 20px;">
+				<span style="color: #000000; font-size: 12px; text-transform: uppercase; letter-spacing: 2px;">■ DISCOVER MORE</span>
+			</div>
+			<ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+				<li><a href="index.html" style="color: rgb(0, 0, 0); text-decoration: none; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">HOME</a></li>
+				<li><a href="#" style="color: rgb(0, 0, 0); text-decoration: none; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">WORK</a></li>
+				<li><a href="services.html" style="color: rgb(0, 0, 0); text-decoration: none; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">SERVICES</a></li>
+				<li><a href="#" style="color: rgb(0, 0, 0); text-decoration: none; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">STUDIO</a></li>
+				<li><a href="contact.html" style="color: rgb(0, 0, 0); text-decoration: none; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">CONTACT US</a></li>
+			</ul>
+		</div>
+		<!-- Column 3: Social -->
+		<div style="width: 25%; height: 100%; padding: 40px; border-right: 1px solid rgb(0, 0, 0);">
+			<div style="margin-bottom: 20px;">
+				<span style="color: #000000; font-size: 12px; text-transform: uppercase; letter-spacing: 2px;">■ JOIN THE CONVERSATION</span>
+			</div>
+			<ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+				<li><a href="#" style="color: rgb(0, 0, 0); text-decoration: none; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">INSTAGRAM</a></li>
+				<li><a href="#" style="color: rgb(0, 0, 0); text-decoration: none; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">LINKEDIN</a></li>
+				<li><a href="#" style="color: rgb(0, 0, 0); text-decoration: none; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">YOUTUBE</a></li>
+				<li><a href="#" style="color: rgb(0, 0, 0); text-decoration: none; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">BEHANCE</a></li>
+			</ul>
+		</div>
+		<!-- Column 4: Contact Details -->
+		<div style="width: 25%; height: 100%; padding: 40px;">
+			<div style="margin-bottom: 20px;">
+				<span style="color: #000000; font-size: 12px; text-transform: uppercase; letter-spacing: 2px;">■ MORE DETAILS</span>
+			</div>
+			<div style="font-size: 12px; line-height: 1.8;">
+				<p style="color: #000000; margin: 0 0 10px 0;">CONTACT US AT</p>
+				<p style="color: rgb(0, 0, 0); margin: 0 0 15px 0; text-transform: lowercase;">info@quorics.com</p>
+				<p style="color: rgb(0, 0, 0); margin: 0 0 20px 0; text-transform: uppercase; line-height: 1.6;">
+				 H448 HIGH SCHOOL ROAD<br>
+				  P.VELUR , NAMAKKAL<br>
+				  TAMILNADU<br>
+				  INDIA
+				</p>
+				<a href="contact.html" style="color: rgb(0, 0, 0); text-decoration: underline; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">
+				  ↳ CONTACT US
+				</a>
+			</div>
+		</div>
+	</footer>
+	<div style="width: 100%; height: 1px; background-color: rgb(0, 0, 0);"></div>
+	<!-- Copyright Section -->
+	<div style="width: 100%; background-color: #f8fafc; padding: 20px 0; text-align: center; font-family: 'IBM Plex Mono', monospace;">
+		<p style="color: #000000; font-size: 11px; margin: 0; letter-spacing: 1px;">
+		  © 2025 Quorics. All rights reserved. | 
+		  <a href="privacy-policy.html" style="color: #000000; text-decoration: underline;">Privacy Policy</a>
+		</p>
+	</div>
+  <!-- Menu Overlay -->
+  <div id="menu-overlay" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #000000; z-index: 1000; display: none; font-family: 'Roboto Flex', sans-serif;">
+    
+    <!-- Desktop Menu (769px and above) -->
+    <div class="desktop-menu" style="display: none;">
+      <!-- Top Bar -->
+      <div style="position: fixed; top: 0; left: 0; width: 100%; z-index: 50; backdrop-filter: blur(10px); border-bottom: 1px solid #3f3f46; height: 56px; display: flex; align-items: center; padding: 0 32px; justify-content: space-between;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="display: inline-block; width: 12px; height: 12px; border-radius: 2px; background-color: white; margin-right: 8px;"></span>
+          <span id="menu-time" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: white;">INR 00:00:00 GMT +5:30</span>
+        </div>
+        <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">
+          <a href="index.html" style="color: white; font-size: 24px; font-weight: bold; letter-spacing: 0.15em; text-decoration: none; font-family: 'Poiret One', cursive;">QUORICS</a>
+        </div>
+        <div style="margin-left: auto;">
+          <span id="menu-close" style="text-transform: uppercase; color: white; font-size: 14px; letter-spacing: 0.1em; font-weight: 600; cursor: pointer;">CLOSE</span>
+        </div>
+      </div>
+      
+      <!-- Desktop Main Content -->
+      <div style="display: flex; align-items: center; justify-content: center; height: 100vh; gap: 100px; margin-top: 56px;">
+        <!-- Left Column: Image -->
+        <div style="flex: 1; max-width: 400px;">
+          <div style="border: 2px solid white; padding: 20px; position: relative;">
+            <img src="business-meeting.jpg" alt="Menu Image" style="width: 100%; height: 450px; object-fit: cover; display: block;">
+            <div style="position: absolute; bottom: -20px; left: 20px; width: 40px; height: 1px; background: white; transform: rotate(45deg);"></div>
+            <div style="position: absolute; bottom: -20px; right: 20px; width: 40px; height: 1px; background: white; transform: rotate(-45deg);"></div>
+          </div>
+        </div>
+        
+        <!-- Right Column: Menu Links -->
+        <div style="flex: 1; max-width: 300px;">
+          <nav style="display: flex; flex-direction: column; gap: 40px;">
+            <a href="index.html" style="color: white; text-decoration: none; font-size: 48px; font-weight: 300; letter-spacing: 3px; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">HOME</a>
+            <a href="services.html" style="color: white; text-decoration: none; font-size: 48px; font-weight: 300; letter-spacing: 3px; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">SERVICES</a>
+            <a href="our-team.html" style="color: white; text-decoration: none; font-size: 48px; font-weight: 300; letter-spacing: 3px; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">TEAM</a>
+            <a href="work.html" style="color: white; text-decoration: none; font-size: 48px; font-weight: 300; letter-spacing: 3px; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">WORK</a>
+          </nav>
+          
+          <!-- Email -->
+          <div style="margin-top: 60px;">
+            <p style="color: white; font-size: 16px; font-weight: 300; margin: 0; letter-spacing: 1px;">info@quorics.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu (768px and below) -->
+    <div class="mobile-menu" style="display: none; font-family: 'Avenir', sans-serif;">
+      <!-- Top Bar -->
+      <div style="position: fixed; top: 0; left: 0; width: 100%; height: 60px; display: flex; align-items: center; padding: 0 40px; justify-content: space-between; z-index: 1001;">
+        <div style="font-size: 24px; font-weight: 300; letter-spacing: 0.2em; color: white;">
+          QUORICS
+        </div>
+        <div>
+          <span class="menu-close-mobile" style="font-size: 16px; font-weight: 400; letter-spacing: 0.15em; color: white; cursor: pointer;">CLOSE</span>
+        </div>
+      </div>
+      
+      <!-- Menu Content -->
+      <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; height: 100vh; padding-left: 40px; gap: 20px;">
+        <a href="index.html" style="color: white; text-decoration: none; font-size: clamp(48px, 8vw, 80px); font-weight: 300; letter-spacing: 0.05em; line-height: 1.1; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Home</a>
+        <a href="services.html" style="color: white; text-decoration: none; font-size: clamp(48px, 8vw, 80px); font-weight: 300; letter-spacing: 0.05em; line-height: 1.1; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Services</a>
+        <a href="our-team.html" style="color: white; text-decoration: none; font-size: clamp(48px, 8vw, 80px); font-weight: 300; letter-spacing: 0.05em; line-height: 1.1; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Team</a>
+        <a href="work.html" style="color: white; text-decoration: none; font-size: clamp(48px, 8vw, 80px); font-weight: 300; letter-spacing: 0.05em; line-height: 1.1; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Work</a>
+      </div>
+      
+      <!-- Bottom Contact -->
+      <div style="position: fixed; bottom: 40px; left: 40px; font-size: 14px; font-weight: 400; letter-spacing: 0.1em; color: white;">
+        INFO@QUORICS.COM
+      </div>
+      
+      <!-- Geometric Elements -->
+      <div style="position: fixed; bottom: 0; right: 0; width: 50%; height: 50%; pointer-events: none;">
+        <svg width="100%" height="100%" viewBox="0 0 400 400" style="opacity: 0.1;">
+          <path d="M0,400 L400,0 L400,200 L200,400 Z" fill="none" stroke="white" stroke-width="1"/>
+          <path d="M100,400 L400,100 L400,300 L300,400 Z" fill="none" stroke="white" stroke-width="1"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Time display functionality
+    function updateTime() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString('en-IN', {
+        timeZone: 'Asia/Kolkata',
+        hour12: false,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      });
+      const timeElements = document.querySelectorAll('#lux-time, #menu-time');
+      timeElements.forEach(element => {
+        if (element) {
+          element.textContent = `INR ${timeString} GMT +5:30`;
+        }
+      });
+    }
+    
+    // Menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      updateTime();
+      setInterval(updateTime, 1000);
+      
+      const menuToggle = document.getElementById('menu-toggle');
+      const menuClose = document.getElementById('menu-close');
+      const menuCloseMobile = document.querySelector('.menu-close-mobile');
+      const menuOverlay = document.getElementById('menu-overlay');
+      const desktopMenu = document.querySelector('.desktop-menu');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      
+      function showMenu() {
+        menuOverlay.style.display = 'block';
+        
+        // Check screen size and show appropriate menu
+        if (window.innerWidth > 768) {
+          desktopMenu.style.display = 'block';
+          mobileMenu.style.display = 'none';
+        } else {
+          desktopMenu.style.display = 'none';
+          mobileMenu.style.display = 'block';
+        }
+      }
+      
+      function hideMenu() {
+        menuOverlay.style.display = 'none';
+        desktopMenu.style.display = 'none';
+        mobileMenu.style.display = 'none';
+      }
+      
+      if (menuToggle) {
+        menuToggle.addEventListener('click', showMenu);
+      }
+      
+      if (menuClose) {
+        menuClose.addEventListener('click', hideMenu);
+      }
+      
+      if (menuCloseMobile) {
+        menuCloseMobile.addEventListener('click', hideMenu);
+      }
+      
+      // Handle window resize
+      window.addEventListener('resize', function() {
+        if (menuOverlay.style.display === 'block') {
+          showMenu();
+        }
+      });
+    });
+    
+    // Message display functions
+    function showMessage(text, type) {
+      const container = document.getElementById('message-container');
+      const messageText = document.getElementById('message-text');
+      
+      messageText.textContent = text;
+      container.className = `mb-6 p-4 rounded-lg ${
+        type === 'success' ? 'bg-green-100 border border-green-300 text-green-800' : 
+        type === 'error' ? 'bg-red-100 border border-red-300 text-red-800' :
+        'bg-blue-100 border border-blue-300 text-blue-800'
+      }`;
+      container.classList.remove('hidden');
+      
+      // Auto-hide after 5 seconds
+      setTimeout(() => {
+        container.classList.add('hidden');
+      }, 5000);
+    }
+    
+    // Initialize EmailJS
+    emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your EmailJS public key
+    
+    // Contact form functionality
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const submitBtn = document.querySelector('button[type="submit"]');
+      submitBtn.textContent = 'SENDING...';
+      submitBtn.disabled = true;
+      
+      const templateParams = {
+        from_name: document.getElementById('name').value,
+        from_email: document.getElementById('email').value,
+        company: document.getElementById('company').value || 'N/A',
+        message: document.getElementById('message').value,
+        to_email: 'ssharvesh616@gmail.com'
+      };
+      
+      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        .then(function(response) {
+          showMessage('Message sent successfully! We will get back to you soon.', 'success');
+          document.getElementById('contact-form').reset();
+        })
+        .catch(function(error) {
+          showMessage('Failed to send message. Please try again or contact us directly.', 'error');
+        })
+        .finally(function() {
+          submitBtn.textContent = 'SEND MESSAGE';
+          submitBtn.disabled = false;
+        });
+    });
+  </script>
+
+
+</body>
+</html>
