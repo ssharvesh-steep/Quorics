@@ -80,22 +80,7 @@
       transform: translateY(0) !important;
     }
     
-    /* Letter animation for EXPLORE SERVICES */
-    .letter-animate {
-      display: inline-block;
-    }
-    
-    .letter-animate:hover {
-      animation: letterWave 0.8s ease-in-out;
-    }
-    
-    @keyframes letterWave {
-      0%, 100% { transform: translateY(0); }
-      20% { transform: translateY(-3px); }
-      40% { transform: translateY(0); }
-      60% { transform: translateY(-2px); }
-      80% { transform: translateY(0); }
-    }
+    /* Letter animation for EXPLORE SERVICES - Removed */
   </style>
   <!-- Top Bar -->
   <div id="lux-topbar" class="fixed top-0 left-0 w-full z-50 backdrop-blur h-14 flex items-center px-8 justify-between">
@@ -141,8 +126,8 @@
             and next-gen startups
           </h1>
           <p class="services-label">OUR SERVICES</p>
-          <div class="services-image" style="flex: 1;">
-            <video id="services-video" width="100%" height="auto" autoplay muted loop playsinline style="border-radius: 15px; background: #fff;">
+          <div class="services-image" style="flex: 1.5; padding-right: 1.5in;">
+            <video id="services-video" width="100%" height="auto" autoplay muted loop playsinline style="border-radius: 15px; background: #fff; transform: scale(1.0);">
               <source src="video.mp4" type="video/mp4" />
               <!-- Fallback image if video not supported -->
               <img src="quorics-logo.png" alt="Quorics Logo" style="width:100%;height:auto;">
@@ -151,7 +136,7 @@
         </div>
         
         <!-- Right: Services List -->
-        <div class="services-right" style="flex: 1; margin-top: 120px;">
+        <div class="services-right" style="flex: 1; margin-top: 185px; margin-right: -2in;">
           <div class="service-item">
             <h3 class="service-title">Data-Driven Market Intelligence</h3>
             <div class="service-details">
@@ -515,7 +500,7 @@
       .mobile-menu { display: block !important; }
     }
   </style>
-   
+  
   <script>
     // Video optimization for faster loading
     document.addEventListener('DOMContentLoaded', function() {
